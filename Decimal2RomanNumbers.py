@@ -1,7 +1,10 @@
 '''
-Explanation needed.
-'''
+This program converts decimal numbers to Roman Numerals 
+This program converts decimal numbers to Roman Numerals 
 
+(To exit the program, please type "exit")
+
+'''
 usernumber = input('Please enter a number: ')
 str_usernumber = str(usernumber)  # converted to string to be able to add in a list
 int_usernumber = int(usernumber)
