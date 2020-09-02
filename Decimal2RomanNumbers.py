@@ -1,11 +1,12 @@
-
+'''
+Explanation needed.
+'''
 
 usernumber = input('Please enter a number: ')
-str_usernumber = str(usernumber)
+str_usernumber = str(usernumber)  # converted to string to be able to add in a list
 int_usernumber = int(usernumber)
 list_usernumber = list(str_usernumber)
 list_romannumber =[] 
-# len_usernumber = len(usernumber)
 digit1 = list_usernumber[-1]
 
 
@@ -117,10 +118,12 @@ if 0 < int_usernumber < 4000:
         def100digit(usernumber)
     elif len(usernumber) == 4:
         def1000digit(usernumber)
+    else:
+        print('Hata uzun kodu')
 else:
-    print('Hata fff kodu')
+    print('Hata geçersi değer kodu')  
 
 
 romannumber = ''.join(list_romannumber)
 
-print('The number', str_usernumber, 'is: ', romannumber)
+print('The number', usernumber, 'is: ', romannumber)
