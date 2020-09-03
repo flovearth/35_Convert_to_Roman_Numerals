@@ -1,17 +1,56 @@
 '''
 This program converts decimal numbers to Roman Numerals 
-This program converts decimal numbers to Roman Numerals 
-
 (To exit the program, please type "exit")
 
 '''
+
 usernumber = input('Please enter a number: ')
+if usernumber == 'exit':
+    exit
+elif not usernumber.isdigit():
+    print('Not Valid Input !!!')
+elif 0 < int(usernumber) < 4000:
+    if len(usernumber) == 1:
+        def1digit(usernumber)
+    elif len(usernumber) == 2:
+        def10digit(usernumber)
+    elif len(usernumber) == 3:
+        def100digit(usernumber)
+    elif len(usernumber) == 4:
+        def1000digit(usernumber)
+    else:
+        print('Hata uzun kodu')
+
+
+
+
+
+
+
+
+# def ask_number():
+#     usernumber = input('Please enter a number: ')
+
+
+# if usernumber.isdigit():
+#     continue
+# else:
+#     print('Not Valid Input !!!')
+#     return ask_number
+
+# while True:
+#     usernumber = input('Please enter a number between 1 - 3999 :  ')
+#     if not usernumber.isdigit():
+#         print('Not Valid Input !!!')
+#     elif 0 < int(usernumber) < 4000:
+#         print('Please enter a number between 1-3999')
+
+
 str_usernumber = str(usernumber)  # converted to string to be able to add in a list
 int_usernumber = int(usernumber)
 list_usernumber = list(str_usernumber)
 list_romannumber =[] 
 digit1 = list_usernumber[-1]
-
 
 
 def def1digit(digit1):
@@ -35,7 +74,6 @@ def def1digit(digit1):
         list_romannumber.append('IX')
     else:
         print('1 d Hata Mesajı')
-
 
 
 def def10digit(digit10):
@@ -64,7 +102,6 @@ def def10digit(digit10):
     def1digit(digit1)    
 
 
-
 def def100digit(digit100):
     digit10 = list_usernumber[-2]
     digit100 = list_usernumber[-3]
@@ -90,10 +127,6 @@ def def100digit(digit100):
     else:
         print('Hata 100 Mesajı')    
     def10digit(digit10)
-    
-
-
-
 
 
 def def1000digit(digit1000):
@@ -109,22 +142,6 @@ def def1000digit(digit1000):
     else:
         print('Hata 1000 mesajı')
     def100digit(digit100)
-
-
-
-if 0 < int_usernumber < 4000: 
-    if len(usernumber) == 1:
-        def1digit(usernumber)
-    elif len(usernumber) == 2:
-        def10digit(usernumber)
-    elif len(usernumber) == 3:
-        def100digit(usernumber)
-    elif len(usernumber) == 4:
-        def1000digit(usernumber)
-    else:
-        print('Hata uzun kodu')
-else:
-    print('Hata geçersi değer kodu')  
 
 
 romannumber = ''.join(list_romannumber)
