@@ -81,5 +81,6 @@ Input       Output
 Ten         "Not Valid Input !!!"
 Exit        "Exiting the program... Good Bye"
 ```
-
+I have tested successfully all above suggested inputs and even more.  Yavuz Seckin
+I agree with the alternate-5.py file.
 
